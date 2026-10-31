@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BetVerse Login</title>
+
+<style>
+
+body{
+background:#0f172a;
+font-family:Arial,sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.box{
+background:#1e293b;
+padding:30px;
+width:350px;
+border-radius:10px;
+color:white;
+}
+
+h1{
+text-align:center;
+color:#00b74a;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:15px;
+background:#00b74a;
+border:none;
+color:white;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#00963d;
+}
+
+a{
+color:#00b74a;
+text-decoration:none;
+}
+
+p{
+text-align:center;
+margin-top:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>Login</h1>
+
+<input
+type="email"
+id="email"
+placeholder="Email"
+autocomplete="email"
+required>
+
+<input
+type="password"
+id="password"
+placeholder="Password"
+autocomplete="current-password"
+required>
+
+<button type="button" data-auth-action="login">
+Login
+</button>
+
+<p id="auth-message" role="alert"></p>
+
+<p>
+Don't have an account?
+<a href="join%20now.html">Join now</a>
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1210">
+    <meta name="description" content="Tennis fixtures and demo odds on BetVerse.">
+    <title>Tennis | BetVerse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="dashboard.html" aria-label="BetVerse dashboard"><span class="logo-mark">B</span>BET<span>VERSE</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="active" href="tennis.html">Tennis</a>
+            <a href="dashboard.html#live-matches">Live</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+        <div class="auth"><a class="login" href="profile.html">My profile</a></div>
+    </header>
+    <main class="dashboard-main">
+        <section class="dashboard-welcome">
+            <div><p class="eyebrow">SPORTS · TENNIS</p><h1>Tennis matches</h1><p>Choose a player to add the match winner to your demo bet slip.</p></div>
+            <a class="start-btn" href="dashboard.html#sports">All sports <span aria-hidden="true">→</span></a>
+        </section>
+        <div class="content-layout dashboard-content">
+            <section class="matches" aria-label="Tennis matches">
+                <div class="section-heading match-heading">
+                    <div><p class="eyebrow">UPCOMING FIXTURES</p><h2>Tennis <span class="match-count">3</span></h2></div>
+                    <span class="market-label">MATCH WINNER</span>
+                </div>
+                <div class="match-list">
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">14:00</span><div class="teams"><strong>C. Alcaraz</strong><span>vs</span><strong>J. Sinner</strong></div><span class="league">MEN'S SINGLES · DEMO EVENT</span></div>
+                        <div class="odds odds-two-way" aria-label="Carlos Alcaraz versus Jannik Sinner demo winner odds">
+                            <button type="button" data-match-id="tennis-alcaraz-sinner" data-match="C. Alcaraz vs J. Sinner" data-pick="C. Alcaraz" data-odd="1.90" aria-pressed="false"><span>PLAYER 1</span><strong>1.90</strong></button>
+                            <button type="button" data-match-id="tennis-alcaraz-sinner" data-match="C. Alcaraz vs J. Sinner" data-pick="J. Sinner" data-odd="1.90" aria-pressed="false"><span>PLAYER 2</span><strong>1.90</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">16:30</span><div class="teams"><strong>I. Świątek</strong><span>vs</span><strong>C. Gauff</strong></div><span class="league">WOMEN'S SINGLES · DEMO EVENT</span></div>
+                        <div class="odds odds-two-way" aria-label="Iga Swiatek versus Coco Gauff demo winner odds">
+                            <button type="button" data-match-id="tennis-swiatek-gauff" data-match="I. Swiatek vs C. Gauff" data-pick="I. Swiatek" data-odd="1.68" aria-pressed="false"><span>PLAYER 1</span><strong>1.68</strong></button>
+                            <button type="button" data-match-id="tennis-swiatek-gauff" data-match="I. Swiatek vs C. Gauff" data-pick="C. Gauff" data-odd="2.15" aria-pressed="false"><span>PLAYER 2</span><strong>2.15</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">18:00</span><div class="teams"><strong>N. Djokovic</strong><span>vs</span><strong>D. Medvedev</strong></div><span class="league">MEN'S SINGLES · DEMO EVENT</span></div>
+                        <div class="odds odds-two-way" aria-label="Novak Djokovic versus Daniil Medvedev demo winner odds">
+                            <button type="button" data-match-id="tennis-djokovic-medvedev" data-match="N. Djokovic vs D. Medvedev" data-pick="N. Djokovic" data-odd="1.75" aria-pressed="false"><span>PLAYER 1</span><strong>1.75</strong></button>
+                            <button type="button" data-match-id="tennis-djokovic-medvedev" data-match="N. Djokovic vs D. Medvedev" data-pick="D. Medvedev" data-odd="2.05" aria-pressed="false"><span>PLAYER 2</span><strong>2.05</strong></button>
+                        </div>
+                    </article>
+                </div>
+                <p class="demo-disclaimer">Fixtures and odds are illustrative demo data only.</p>
+            </section>
+            <aside class="betslip" aria-labelledby="slip-title">
+                <div class="slip-header"><h2 id="slip-title">Bet slip</h2><span id="selection-count">0</span></div>
+                <div id="bet-list" aria-live="polite"><p class="empty-slip">Choose an odd to add a selection.</p></div>
+                <label class="stake-label" for="stake">Stake <span>Demo currency</span></label>
+                <div class="stake-field"><span>$</span><input type="number" id="stake" min="0" step="0.01" placeholder="0.00" inputmode="decimal"></div>
+                <div class="possible"><span>Potential return</span><strong>$<span id="win">0.00</span></strong></div>
+                <button id="place-bet" type="button" disabled>Place demo bet</button>
+                <p id="notice" class="notice" role="status" aria-live="polite"></p>
+                <p class="responsible-note">Demo only. No real money or bets are involved.</p>
+            </aside>
+        </div>
+        <span id="dashboard-balance" hidden>0.00</span>
+    </main>
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <a href="dashboard.html"><span aria-hidden="true">⌂</span><small>Home</small></a>
+        <a href="tennis.html" aria-current="page"><span aria-hidden="true">🎾</span><small>Sports</small></a>
+        <a href="dashboard.html#live-matches"><span aria-hidden="true">●</span><small>Live</small></a>
+        <a href="mybet.html"><span aria-hidden="true">▤</span><small>Bets</small></a>
+        <a href="profile.html"><span aria-hidden="true">◎</span><small>Profile</small></a>
+    </nav>
+    <footer><a class="logo" href="dashboard.html"><span class="logo-mark">B</span>BET<span>VERSE</span></a><p>© 2026 BetVerse. For demonstration purposes only.</p><a href="#">Back to top ↑</a></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1210">
+    <meta name="description" content="Your BetVerse account dashboard.">
+    <title>Dashboard | BetVerse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <a class="logo" href="dashboard.html" aria-label="BetVerse dashboard"><span class="logo-mark">B</span>BET<span>VERSE</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#sports">Sports</a>
+            <a href="#live-matches">Live <span class="live-dot"></span></a>
+            <a class="active" href="#">Dashboard</a>
+        </nav>
+        <div class="auth">
+            <a class="login" href="profile.html">My profile</a>
+            <button class="register dashboard-logout" id="logout" type="button">Log out</button>
+        </div>
+    </header>
+
+    <div class="menu-backdrop" id="menu-backdrop" hidden></div>
+    <nav class="site-menu" id="site-menu" aria-label="Dashboard menu" hidden>
+        <div class="site-menu-heading">
+            <strong>Menu</strong>
+            <button type="button" id="menu-close" class="menu-close" aria-label="Close navigation menu">×</button>
+        </div>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#sports">Sports</a>
+        <a href="#live-matches">Live matches</a>
+        <a href="#matches">Today's matches</a>
+        <a href="promotions.html">🎁 Promotions</a>
+        <a href="wallet.html">Wallet</a>
+        <a href="deposit.html">Deposit</a>
+        <a href="withdraw.html">Withdraw</a>
+        <a href="profile.html">My profile</a>
+        <a href="mybet.html">My Bets</a>
+        <a href="bet%20history.html">Bet History</a>
+        <a href="result.html">Results</a>
+        <a href="admin.html">Admin Dashboard <span class="demo-menu-label">DEMO</span></a>
+    </nav>
+
+    <main class="dashboard-main">
+        <section class="dashboard-welcome">
+            <div>
+                <p class="eyebrow">YOUR BETVERSE ACCOUNT</p>
+                <h1>Welcome back, <span id="dashboard-username">there</span>.</h1>
+                <p>Here’s your account at a glance. Ready for the next match?</p>
+            </div>
+            <a class="start-btn" href="#matches">Explore matches <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="dashboard-grid" aria-label="Account overview">
+            <article class="dashboard-balance">
+                <div class="dashboard-card-heading">
+                    <span class="dashboard-icon" aria-hidden="true">◈</span>
+                    <span>AVAILABLE BALANCE</span>
+                </div>
+                <strong class="balance-amount">$<span id="dashboard-balance">0.00</span></strong>
+                <p>Demo funds only</p>
+                <a href="wallet.html">View wallet <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="dashboard-stat">
+                <span class="dashboard-stat-icon" aria-hidden="true">◎</span>
+                <p>ACCOUNT</p>
+                <strong id="dashboard-email">—</strong>
+                <a href="profile.html">View profile <span aria-hidden="true">→</span></a>
+            </article>
+        </section>
+
+        <section class="sports-section" id="sports" aria-label="Sports">
+            <div class="section-heading">
+                <div><p class="eyebrow">FIND YOUR GAME</p><h2>Browse sports</h2></div>
+                <span class="section-note">Pick a sport to get started</span>
+            </div>
+            <div class="sports-menu">
+                <a class="sport-card" href="football.html"><span>⚽</span><strong>Football</strong><small>View matches</small></a>
+                <a class="sport-card" href="basketball.html"><span>🏀</span><strong>Basketball</strong><small>View matches</small></a>
+                <a class="sport-card" href="tennis.html"><span>🎾</span><strong>Tennis</strong><small>View matches</small></a>
+                <a class="sport-card" href="volleyball.html"><span>🏐</span><strong>Volleyball</strong><small>View matches</small></a>
+            </div>
+        </section>
+
+        <div class="content-layout dashboard-content">
+            <section class="matches" id="matches">
+                <section class="quick-coupons" aria-label="Quick bet coupons">
+                    <div class="section-heading match-heading">
+                        <div><p class="eyebrow">QUICK PICKS</p><h2>Popular Bets <span class="match-count">4</span></h2></div>
+                        <span class="market-label">ADD TO BET SLIP</span>
+                    </div>
+                    <div class="coupon-grid">
+                        <article class="coupon-card">
+                            <span class="coupon-match">Arsenal vs Chelsea · Match result</span>
+                            <div class="coupon-choice">
+                                <strong>Arsenal Win</strong>
+                                <div class="odds">
+                                    <button type="button" data-match-id="coupon-arsenal-win" data-match="Arsenal vs Chelsea" data-pick="Arsenal Win" data-odd="2.10" aria-pressed="false"><span>DEMO ODDS</span><strong>2.10</strong></button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="coupon-card">
+                            <span class="coupon-match">Arsenal vs Chelsea · Both teams to score</span>
+                            <div class="coupon-choice">
+                                <strong>BTTS - Yes</strong>
+                                <div class="odds">
+                                    <button type="button" data-match-id="coupon-arsenal-btts" data-match="Arsenal vs Chelsea" data-pick="BTTS - Yes" data-odd="1.75" aria-pressed="false"><span>DEMO ODDS</span><strong>1.75</strong></button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="coupon-card">
+                            <span class="coupon-match">Arsenal vs Chelsea · Total goals</span>
+                            <div class="coupon-choice">
+                                <strong>Over 2.5 Goals</strong>
+                                <div class="odds">
+                                    <button type="button" data-match-id="coupon-arsenal-over-2-5" data-match="Arsenal vs Chelsea" data-pick="Over 2.5 Goals" data-odd="1.90" aria-pressed="false"><span>DEMO ODDS</span><strong>1.90</strong></button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="coupon-card">
+                            <span class="coupon-match">Liverpool vs Man City · Match result</span>
+                            <div class="coupon-choice">
+                                <strong>Liverpool Win</strong>
+                                <div class="odds">
+                                    <button type="button" data-match-id="coupon-liverpool-win" data-match="Liverpool vs Man City" data-pick="Liverpool Win" data-odd="2.60" aria-pressed="false"><span>DEMO ODDS</span><strong>2.60</strong></button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <p class="demo-disclaimer">Popular bet selections and odds are illustrative demo data. Add a pick to include it in your bet slip.</p>
+                </section>
+                <section class="live-matches" id="live-matches" aria-label="Live football matches">
+                    <div class="section-heading match-heading">
+                        <div><p class="eyebrow">IN PLAY</p><h2>Live matches <span class="match-count">3</span></h2></div>
+                        <span class="market-label"><span class="live-dot"></span> LIVE NOW</span>
+                    </div>
+                    <div class="match-list">
+                        <article class="match live-match">
+                            <div class="match-info"><span class="match-time"><span class="live-dot"></span> 67'</span><div class="teams"><strong>Man City</strong><span class="live-score">2 - 1</span><strong>Tottenham</strong></div><span class="league">ENGLISH PREMIER LEAGUE · DEMO SCORE</span></div>
+                            <div class="odds" aria-label="Manchester City versus Tottenham live demo match result odds">
+                                <button type="button" data-match-id="live-city-tottenham" data-match="Man City vs Tottenham (Live)" data-pick="Man City" data-odd="1.85" aria-pressed="false"><span>1</span><strong>1.85</strong></button>
+                                <button type="button" data-match-id="live-city-tottenham" data-match="Man City vs Tottenham (Live)" data-pick="Draw" data-odd="3.90" aria-pressed="false"><span>X</span><strong>3.90</strong></button>
+                                <button type="button" data-match-id="live-city-tottenham" data-match="Man City vs Tottenham (Live)" data-pick="Tottenham" data-odd="4.25" aria-pressed="false"><span>2</span><strong>4.25</strong></button>
+                            </div>
+                        </article>
+                        <article class="match live-match">
+                            <div class="match-info"><span class="match-time"><span class="live-dot"></span> 54'</span><div class="teams"><strong>Real Madrid</strong><span class="live-score">1 - 0</span><strong>Sevilla</strong></div><span class="league">SPANISH LA LIGA · DEMO SCORE</span></div>
+                            <div class="odds" aria-label="Real Madrid versus Sevilla live demo match result odds">
+                                <button type="button" data-match-id="live-madrid-sevilla" data-match="Real Madrid vs Sevilla (Live)" data-pick="Real Madrid" data-odd="1.65" aria-pressed="false"><span>1</span><strong>1.65</strong></button>
+                                <button type="button" data-match-id="live-madrid-sevilla" data-match="Real Madrid vs Sevilla (Live)" data-pick="Draw" data-odd="4.10" aria-pressed="false"><span>X</span><strong>4.10</strong></button>
+                                <button type="button" data-match-id="live-madrid-sevilla" data-match="Real Madrid vs Sevilla (Live)" data-pick="Sevilla" data-odd="5.50" aria-pressed="false"><span>2</span><strong>5.50</strong></button>
+                            </div>
+                        </article>
+                        <article class="match live-match">
+                            <div class="match-info"><span class="match-time"><span class="live-dot"></span> 32'</span><div class="teams"><strong>Juventus</strong><span class="live-score">0 - 0</span><strong>Roma</strong></div><span class="league">ITALIAN SERIE A · DEMO SCORE</span></div>
+                            <div class="odds" aria-label="Juventus versus Roma live demo match result odds">
+                                <button type="button" data-match-id="live-juventus-roma" data-match="Juventus vs Roma (Live)" data-pick="Juventus" data-odd="2.05" aria-pressed="false"><span>1</span><strong>2.05</strong></button>
+                                <button type="button" data-match-id="live-juventus-roma" data-match="Juventus vs Roma (Live)" data-pick="Draw" data-odd="2.75" aria-pressed="false"><span>X</span><strong>2.75</strong></button>
+                                <button type="button" data-match-id="live-juventus-roma" data-match="Juventus vs Roma (Live)" data-pick="Roma" data-odd="3.80" aria-pressed="false"><span>2</span><strong>3.80</strong></button>
+                            </div>
+                        </article>
+                    </div>
+                    <p class="demo-disclaimer">Live scores, times, and odds are illustrative demo data, not a live feed.</p>
+                </section>
+                <div class="section-heading match-heading">
+                    <div><p class="eyebrow">MONDAY, OCTOBER 26</p><h2>Today's matches <span class="match-count">14</span></h2></div>
+                    <span class="market-label">MATCH RESULT</span>
+                </div>
+                <div class="match-list">
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">20:00 <span class="live-dot"></span></span><div class="teams"><strong>Arsenal</strong><span>vs</span><strong>Chelsea</strong></div><span class="league">ENGLISH PREMIER LEAGUE</span></div>
+                        <div class="odds" aria-label="Arsenal versus Chelsea match result odds">
+                            <button type="button" data-match-id="arsenal-chelsea" data-match="Arsenal vs Chelsea" data-pick="Arsenal" data-odd="2.10" aria-pressed="false"><span>1</span><strong>2.10</strong></button>
+                            <button type="button" data-match-id="arsenal-chelsea" data-match="Arsenal vs Chelsea" data-pick="Draw" data-odd="3.50" aria-pressed="false"><span>X</span><strong>3.50</strong></button>
+                            <button type="button" data-match-id="arsenal-chelsea" data-match="Arsenal vs Chelsea" data-pick="Chelsea" data-odd="2.80" aria-pressed="false"><span>2</span><strong>2.80</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">21:00</span><div class="teams"><strong>Liverpool</strong><span>vs</span><strong>Man City</strong></div><span class="league">ENGLISH PREMIER LEAGUE</span></div>
+                        <div class="odds" aria-label="Liverpool versus Manchester City match result odds">
+                            <button type="button" data-match-id="liverpool-city" data-match="Liverpool vs Man City" data-pick="Liverpool" data-odd="2.60" aria-pressed="false"><span>1</span><strong>2.60</strong></button>
+                            <button type="button" data-match-id="liverpool-city" data-match="Liverpool vs Man City" data-pick="Draw" data-odd="3.40" aria-pressed="false"><span>X</span><strong>3.40</strong></button>
+                            <button type="button" data-match-id="liverpool-city" data-match="Liverpool vs Man City" data-pick="Man City" data-odd="2.20" aria-pressed="false"><span>2</span><strong>2.20</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">22:00</span><div class="teams"><strong>Barcelona</strong><span>vs</span><strong>Real Madrid</strong></div><span class="league">SPANISH LA LIGA</span></div>
+                        <div class="odds" aria-label="Barcelona versus Real Madrid match result odds">
+                            <button type="button" data-match-id="barcelona-madrid" data-match="Barcelona vs Real Madrid" data-pick="Barcelona" data-odd="2.45" aria-pressed="false"><span>1</span><strong>2.45</strong></button>
+                            <button type="button" data-match-id="barcelona-madrid" data-match="Barcelona vs Real Madrid" data-pick="Draw" data-odd="3.75" aria-pressed="false"><span>X</span><strong>3.75</strong></button>
+                            <button type="button" data-match-id="barcelona-madrid" data-match="Barcelona vs Real Madrid" data-pick="Real Madrid" data-odd="2.35" aria-pressed="false"><span>2</span><strong>2.35</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">18:00</span><div class="teams"><strong>Bayern Munich</strong><span>vs</span><strong>Dortmund</strong></div><span class="league">BUNDESLIGA</span></div>
+                        <div class="odds" aria-label="Bayern Munich versus Dortmund match result odds">
+                            <button type="button" data-match-id="bayern-dortmund" data-match="Bayern Munich vs Dortmund" data-pick="Bayern Munich" data-odd="2.10" aria-pressed="false"><span>1</span><strong>2.10</strong></button>
+                            <button type="button" data-match-id="bayern-dortmund" data-match="Bayern Munich vs Dortmund" data-pick="Draw" data-odd="3.50" aria-pressed="false"><span>X</span><strong>3.50</strong></button>
+                            <button type="button" data-match-id="bayern-dortmund" data-match="Bayern Munich vs Dortmund" data-pick="Dortmund" data-odd="2.90" aria-pressed="false"><span>2</span><strong>2.90</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">18:30</span><div class="teams"><strong>Newcastle</strong><span>vs</span><strong>Tottenham</strong></div><span class="league">ENGLISH PREMIER LEAGUE</span></div>
+                        <div class="odds" aria-label="Newcastle versus Tottenham match result odds">
+                            <button type="button" data-match-id="newcastle-tottenham" data-match="Newcastle vs Tottenham" data-pick="Newcastle" data-odd="2.25" aria-pressed="false"><span>1</span><strong>2.25</strong></button>
+                            <button type="button" data-match-id="newcastle-tottenham" data-match="Newcastle vs Tottenham" data-pick="Draw" data-odd="3.40" aria-pressed="false"><span>X</span><strong>3.40</strong></button>
+                            <button type="button" data-match-id="newcastle-tottenham" data-match="Newcastle vs Tottenham" data-pick="Tottenham" data-odd="2.95" aria-pressed="false"><span>2</span><strong>2.95</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">19:00</span><div class="teams"><strong>Man United</strong><span>vs</span><strong>Aston Villa</strong></div><span class="league">ENGLISH PREMIER LEAGUE</span></div>
+                        <div class="odds" aria-label="Manchester United versus Aston Villa match result odds">
+                            <button type="button" data-match-id="united-villa" data-match="Man United vs Aston Villa" data-pick="Man United" data-odd="2.15" aria-pressed="false"><span>1</span><strong>2.15</strong></button>
+                            <button type="button" data-match-id="united-villa" data-match="Man United vs Aston Villa" data-pick="Draw" data-odd="3.60" aria-pressed="false"><span>X</span><strong>3.60</strong></button>
+                            <button type="button" data-match-id="united-villa" data-match="Man United vs Aston Villa" data-pick="Aston Villa" data-odd="3.10" aria-pressed="false"><span>2</span><strong>3.10</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">19:30</span><div class="teams"><strong>PSG</strong><span>vs</span><strong>Marseille</strong></div><span class="league">FRENCH LIGUE 1</span></div>
+                        <div class="odds" aria-label="Paris Saint-Germain versus Marseille match result odds">
+                            <button type="button" data-match-id="psg-marseille" data-match="PSG vs Marseille" data-pick="PSG" data-odd="1.75" aria-pressed="false"><span>1</span><strong>1.75</strong></button>
+                            <button type="button" data-match-id="psg-marseille" data-match="PSG vs Marseille" data-pick="Draw" data-odd="3.90" aria-pressed="false"><span>X</span><strong>3.90</strong></button>
+                            <button type="button" data-match-id="psg-marseille" data-match="PSG vs Marseille" data-pick="Marseille" data-odd="4.20" aria-pressed="false"><span>2</span><strong>4.20</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">20:00</span><div class="teams"><strong>Inter Milan</strong><span>vs</span><strong>Juventus</strong></div><span class="league">ITALIAN SERIE A</span></div>
+                        <div class="odds" aria-label="Inter Milan versus Juventus match result odds">
+                            <button type="button" data-match-id="inter-juventus" data-match="Inter Milan vs Juventus" data-pick="Inter Milan" data-odd="2.05" aria-pressed="false"><span>1</span><strong>2.05</strong></button>
+                            <button type="button" data-match-id="inter-juventus" data-match="Inter Milan vs Juventus" data-pick="Draw" data-odd="3.20" aria-pressed="false"><span>X</span><strong>3.20</strong></button>
+                            <button type="button" data-match-id="inter-juventus" data-match="Inter Milan vs Juventus" data-pick="Juventus" data-odd="3.45" aria-pressed="false"><span>2</span><strong>3.45</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">20:30</span><div class="teams"><strong>AC Milan</strong><span>vs</span><strong>Napoli</strong></div><span class="league">ITALIAN SERIE A</span></div>
+                        <div class="odds" aria-label="AC Milan versus Napoli match result odds">
+                            <button type="button" data-match-id="milan-napoli" data-match="AC Milan vs Napoli" data-pick="AC Milan" data-odd="2.40" aria-pressed="false"><span>1</span><strong>2.40</strong></button>
+                            <button type="button" data-match-id="milan-napoli" data-match="AC Milan vs Napoli" data-pick="Draw" data-odd="3.25" aria-pressed="false"><span>X</span><strong>3.25</strong></button>
+                            <button type="button" data-match-id="milan-napoli" data-match="AC Milan vs Napoli" data-pick="Napoli" data-odd="2.85" aria-pressed="false"><span>2</span><strong>2.85</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">21:00</span><div class="teams"><strong>Ajax</strong><span>vs</span><strong>PSV</strong></div><span class="league">DUTCH EREDIVISIE</span></div>
+                        <div class="odds" aria-label="Ajax versus PSV match result odds">
+                            <button type="button" data-match-id="ajax-psv" data-match="Ajax vs PSV" data-pick="Ajax" data-odd="2.70" aria-pressed="false"><span>1</span><strong>2.70</strong></button>
+                            <button type="button" data-match-id="ajax-psv" data-match="Ajax vs PSV" data-pick="Draw" data-odd="3.80" aria-pressed="false"><span>X</span><strong>3.80</strong></button>
+                            <button type="button" data-match-id="ajax-psv" data-match="Ajax vs PSV" data-pick="PSV" data-odd="2.25" aria-pressed="false"><span>2</span><strong>2.25</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">21:30</span><div class="teams"><strong>Porto</strong><span>vs</span><strong>Benfica</strong></div><span class="league">PORTUGUESE PRIMEIRA LIGA</span></div>
+                        <div class="odds" aria-label="Porto versus Benfica match result odds">
+                            <button type="button" data-match-id="porto-benfica" data-match="Porto vs Benfica" data-pick="Porto" data-odd="2.35" aria-pressed="false"><span>1</span><strong>2.35</strong></button>
+                            <button type="button" data-match-id="porto-benfica" data-match="Porto vs Benfica" data-pick="Draw" data-odd="3.25" aria-pressed="false"><span>X</span><strong>3.25</strong></button>
+                            <button type="button" data-match-id="porto-benfica" data-match="Porto vs Benfica" data-pick="Benfica" data-odd="2.95" aria-pressed="false"><span>2</span><strong>2.95</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">22:00</span><div class="teams"><strong>Atletico Madrid</strong><span>vs</span><strong>Sevilla</strong></div><span class="league">SPANISH LA LIGA</span></div>
+                        <div class="odds" aria-label="Atletico Madrid versus Sevilla match result odds">
+                            <button type="button" data-match-id="atletico-sevilla" data-match="Atletico Madrid vs Sevilla" data-pick="Atletico Madrid" data-odd="1.95" aria-pressed="false"><span>1</span><strong>1.95</strong></button>
+                            <button type="button" data-match-id="atletico-sevilla" data-match="Atletico Madrid vs Sevilla" data-pick="Draw" data-odd="3.30" aria-pressed="false"><span>X</span><strong>3.30</strong></button>
+                            <button type="button" data-match-id="atletico-sevilla" data-match="Atletico Madrid vs Sevilla" data-pick="Sevilla" data-odd="4.10" aria-pressed="false"><span>2</span><strong>4.10</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">22:30</span><div class="teams"><strong>Leverkusen</strong><span>vs</span><strong>RB Leipzig</strong></div><span class="league">BUNDESLIGA</span></div>
+                        <div class="odds" aria-label="Bayer Leverkusen versus RB Leipzig match result odds">
+                            <button type="button" data-match-id="leverkusen-leipzig" data-match="Leverkusen vs RB Leipzig" data-pick="Leverkusen" data-odd="2.05" aria-pressed="false"><span>1</span><strong>2.05</strong></button>
+                            <button type="button" data-match-id="leverkusen-leipzig" data-match="Leverkusen vs RB Leipzig" data-pick="Draw" data-odd="3.70" aria-pressed="false"><span>X</span><strong>3.70</strong></button>
+                            <button type="button" data-match-id="leverkusen-leipzig" data-match="Leverkusen vs RB Leipzig" data-pick="RB Leipzig" data-odd="3.10" aria-pressed="false"><span>2</span><strong>3.10</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">23:00</span><div class="teams"><strong>Celtic</strong><span>vs</span><strong>Rangers</strong></div><span class="league">SCOTTISH PREMIERSHIP</span></div>
+                        <div class="odds" aria-label="Celtic versus Rangers match result odds">
+                            <button type="button" data-match-id="celtic-rangers" data-match="Celtic vs Rangers" data-pick="Celtic" data-odd="2.20" aria-pressed="false"><span>1</span><strong>2.20</strong></button>
+                            <button type="button" data-match-id="celtic-rangers" data-match="Celtic vs Rangers" data-pick="Draw" data-odd="3.40" aria-pressed="false"><span>X</span><strong>3.40</strong></button>
+                            <button type="button" data-match-id="celtic-rangers" data-match="Celtic vs Rangers" data-pick="Rangers" data-odd="2.90" aria-pressed="false"><span>2</span><strong>2.90</strong></button>
+                        </div>
+                    </article>
+                </div>
+                <p class="demo-disclaimer">Odds and fixtures shown for demonstration purposes only.</p>
+            </section>
+
+            <aside class="betslip" aria-labelledby="slip-title">
+                <div class="slip-header"><h2 id="slip-title">Bet slip</h2><span id="selection-count">0</span></div>
+                <div id="bet-list" aria-live="polite"><p class="empty-slip">Choose an odd to add a selection.</p></div>
+                <label class="stake-label" for="stake">Stake <span>Demo currency</span></label>
+                <div class="stake-field"><span>$</span><input type="number" id="stake" min="0" step="0.01" placeholder="0.00" inputmode="decimal"></div>
+                <div class="possible"><span>Potential return</span><strong>$<span id="win">0.00</span></strong></div>
+                <button id="place-bet" type="button" disabled>Place demo bet</button>
+                <p id="notice" class="notice" role="status" aria-live="polite"></p>
+                <p class="responsible-note">Demo only. No real money or bets are involved.</p>
+            </aside>
+        </div>
+
+        <section class="dashboard-services">
+            <div class="section-heading">
+                <div><p class="eyebrow">ACCOUNT SERVICES</p><h2>Quick actions</h2></div>
+                <span class="section-note">Manage your demo account</span>
+            </div>
+            <div class="account-menu">
+                <a class="account-card" href="wallet.html"><span aria-hidden="true">◈</span><strong>My wallet</strong><small>Check your balance</small><b aria-hidden="true">→</b></a>
+                <a class="account-card" href="deposit.html"><span aria-hidden="true">＋</span><strong>Deposit</strong><small>Add demo funds</small><b aria-hidden="true">→</b></a>
+                <a class="account-card" href="withdraw.html"><span aria-hidden="true">↗</span><strong>Withdraw</strong><small>Withdraw demo funds</small><b aria-hidden="true">→</b></a>
+                <a class="account-card" href="profile.html"><span aria-hidden="true">◎</span><strong>My profile</strong><small>Account details</small><b aria-hidden="true">→</b></a>
+                <a class="account-card" href="mybet.html"><span aria-hidden="true">▤</span><strong>My Bets</strong><small>View your pending bets</small><b aria-hidden="true">→</b></a>
+                <a class="account-card" href="bet%20history.html"><span aria-hidden="true">◷</span><strong>Bet History</strong><small>Review saved bets</small><b aria-hidden="true">→</b></a>
+                <a class="account-card" href="result.html"><span aria-hidden="true">✓</span><strong>Results</strong><small>See settled bets</small><b aria-hidden="true">→</b></a>
+                <a class="account-card" href="promotions.html"><span aria-hidden="true">🎁</span><strong>Promotions</strong><small>Browse demo offers</small><b aria-hidden="true">→</b></a>
+                <a class="account-card" href="admin.html"><span aria-hidden="true">⚙</span><strong>Admin Dashboard</strong><small>Demo bet settlement</small><b aria-hidden="true">→</b></a>
+            </div>
+        </section>
+
+        <aside class="dashboard-notice" id="dashboard-notice" role="status">
+            <span aria-hidden="true">ⓘ</span>
+            This is a front-end demo. Account data is stored in Supabase; balances and bets use demo funds only.
+        </aside>
+    </main>
+
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <a href="dashboard.html" aria-current="page"><span aria-hidden="true">⌂</span><small>Home</small></a>
+        <a href="dashboard.html#sports"><span aria-hidden="true">⚽</span><small>Sports</small></a>
+        <a href="#live-matches"><span aria-hidden="true">●</span><small>Live</small></a>
+        <a href="mybet.html"><span aria-hidden="true">▤</span><small>Bets</small></a>
+        <a href="profile.html"><span aria-hidden="true">◎</span><small>Profile</small></a>
+    </nav>
+    <footer>
+        <a class="logo" href="dashboard.html"><span class="logo-mark">B</span>BET<span>VERSE</span></a>
+        <p>© 2026 BetVerse. For demonstration purposes only.</p>
+        <a href="#">Back to top ↑</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1210">
+    <title>Bet History | BetVerse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <a class="logo" href="dashboard.html"><span class="logo-mark">B</span>BET<span>VERSE</span></a>
+        <nav class="main-nav" aria-label="Account navigation">
+            <a href="mybet.html">My Bets</a>
+            <a class="active" href="bet%20history.html">Bet History</a>
+        </nav>
+        <div class="auth"><a class="login" href="dashboard.html">Dashboard</a></div>
+    </header>
+    <div class="menu-backdrop" id="menu-backdrop" hidden></div>
+    <nav class="site-menu" id="site-menu" aria-label="Dashboard menu" hidden>
+        <div class="site-menu-heading"><strong>Menu</strong><button type="button" id="menu-close" class="menu-close" aria-label="Close navigation menu">×</button></div>
+        <a href="dashboard.html">Dashboard</a><a href="dashboard.html#sports">Sports</a>
+        <a href="dashboard.html#matches">Today's matches</a><a href="wallet.html">Wallet</a>
+        <a href="deposit.html">Deposit</a><a href="withdraw.html">Withdraw</a>
+        <a href="profile.html">My profile</a><a href="mybet.html">My Bets</a>
+        <a href="bet%20history.html">Bet History</a><a href="result.html">Results</a>
+        <a href="admin.html">Admin Dashboard <span class="demo-menu-label">DEMO</span></a>
+    </nav>
+    <main class="bet-records-main">
+        <div class="section-heading">
+            <div><p class="eyebrow">YOUR ACCOUNT</p><h1>Bet History</h1></div>
+            <a class="start-btn" href="dashboard.html#matches">Explore matches <span aria-hidden="true">→</span></a>
+        </div>
+        <section id="bet-records" class="bet-record-list" aria-live="polite"></section>
+        <p class="responsible-note">Demo bets only. No real money or bets are involved.</p>
+    </main>
+    <footer>
+        <a class="logo" href="dashboard.html"><span class="logo-mark">B</span>BET<span>VERSE</span></a>
+        <p>© 2026 BetVerse. For demonstration purposes only.</p>
+        <a href="dashboard.html">Back to dashboard</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="bet-records.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

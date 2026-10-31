@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1210">
+    <meta name="description" content="Basketball fixtures and demo odds on BetVerse.">
+    <title>Basketball | BetVerse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="dashboard.html" aria-label="BetVerse dashboard"><span class="logo-mark">B</span>BET<span>VERSE</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="active" href="basketball.html">Basketball</a>
+            <a href="dashboard.html#live-matches">Live</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+        <div class="auth"><a class="login" href="profile.html">My profile</a></div>
+    </header>
+    <main class="dashboard-main">
+        <section class="dashboard-welcome">
+            <div><p class="eyebrow">SPORTS · BASKETBALL</p><h1>Basketball matches</h1><p>Choose a winner to add it to your demo bet slip.</p></div>
+            <a class="start-btn" href="dashboard.html#sports">All sports <span aria-hidden="true">→</span></a>
+        </section>
+        <div class="content-layout dashboard-content">
+            <section class="matches" aria-label="Basketball matches">
+                <div class="section-heading match-heading">
+                    <div><p class="eyebrow">UPCOMING FIXTURES</p><h2>Basketball <span class="match-count">3</span></h2></div>
+                    <span class="market-label">MATCH WINNER</span>
+                </div>
+                <div class="match-list">
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">19:00</span><div class="teams"><strong>Boston Celtics</strong><span>vs</span><strong>Miami Heat</strong></div><span class="league">NBA</span></div>
+                        <div class="odds odds-two-way" aria-label="Boston Celtics versus Miami Heat demo winner odds">
+                            <button type="button" data-match-id="basketball-celtics-heat" data-match="Boston Celtics vs Miami Heat" data-pick="Boston Celtics" data-odd="1.72" aria-pressed="false"><span>HOME</span><strong>1.72</strong></button>
+                            <button type="button" data-match-id="basketball-celtics-heat" data-match="Boston Celtics vs Miami Heat" data-pick="Miami Heat" data-odd="2.10" aria-pressed="false"><span>AWAY</span><strong>2.10</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">20:30</span><div class="teams"><strong>LA Lakers</strong><span>vs</span><strong>Golden State</strong></div><span class="league">NBA</span></div>
+                        <div class="odds odds-two-way" aria-label="LA Lakers versus Golden State demo winner odds">
+                            <button type="button" data-match-id="basketball-lakers-warriors" data-match="LA Lakers vs Golden State" data-pick="LA Lakers" data-odd="2.05" aria-pressed="false"><span>HOME</span><strong>2.05</strong></button>
+                            <button type="button" data-match-id="basketball-lakers-warriors" data-match="LA Lakers vs Golden State" data-pick="Golden State" data-odd="1.78" aria-pressed="false"><span>AWAY</span><strong>1.78</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">21:00</span><div class="teams"><strong>Chicago Bulls</strong><span>vs</span><strong>New York Knicks</strong></div><span class="league">NBA</span></div>
+                        <div class="odds odds-two-way" aria-label="Chicago Bulls versus New York Knicks demo winner odds">
+                            <button type="button" data-match-id="basketball-bulls-knicks" data-match="Chicago Bulls vs New York Knicks" data-pick="Chicago Bulls" data-odd="2.30" aria-pressed="false"><span>HOME</span><strong>2.30</strong></button>
+                            <button type="button" data-match-id="basketball-bulls-knicks" data-match="Chicago Bulls vs New York Knicks" data-pick="New York Knicks" data-odd="1.62" aria-pressed="false"><span>AWAY</span><strong>1.62</strong></button>
+                        </div>
+                    </article>
+                </div>
+                <p class="demo-disclaimer">Fixtures and odds are illustrative demo data only.</p>
+            </section>
+            <aside class="betslip" aria-labelledby="slip-title">
+                <div class="slip-header"><h2 id="slip-title">Bet slip</h2><span id="selection-count">0</span></div>
+                <div id="bet-list" aria-live="polite"><p class="empty-slip">Choose an odd to add a selection.</p></div>
+                <label class="stake-label" for="stake">Stake <span>Demo currency</span></label>
+                <div class="stake-field"><span>$</span><input type="number" id="stake" min="0" step="0.01" placeholder="0.00" inputmode="decimal"></div>
+                <div class="possible"><span>Potential return</span><strong>$<span id="win">0.00</span></strong></div>
+                <button id="place-bet" type="button" disabled>Place demo bet</button>
+                <p id="notice" class="notice" role="status" aria-live="polite"></p>
+                <p class="responsible-note">Demo only. No real money or bets are involved.</p>
+            </aside>
+        </div>
+        <span id="dashboard-balance" hidden>0.00</span>
+    </main>
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <a href="dashboard.html"><span aria-hidden="true">⌂</span><small>Home</small></a>
+        <a href="basketball.html" aria-current="page"><span aria-hidden="true">🏀</span><small>Sports</small></a>
+        <a href="dashboard.html#live-matches"><span aria-hidden="true">●</span><small>Live</small></a>
+        <a href="mybet.html"><span aria-hidden="true">▤</span><small>Bets</small></a>
+        <a href="profile.html"><span aria-hidden="true">◎</span><small>Profile</small></a>
+    </nav>
+    <footer><a class="logo" href="dashboard.html"><span class="logo-mark">B</span>BET<span>VERSE</span></a><p>© 2026 BetVerse. For demonstration purposes only.</p><a href="#">Back to top ↑</a></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

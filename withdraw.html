@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Withdraw</title>
+
+<style>
+
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.box{
+background:#1e293b;
+padding:30px;
+border-radius:10px;
+width:350px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:15px;
+background:#00b74a;
+border:none;
+color:white;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Withdraw Funds</h2>
+
+<input
+type="number"
+id="amount"
+placeholder="Enter Amount"
+min="0.01"
+max="10000"
+step="0.01">
+
+<button type="button" data-wallet-action="withdraw">
+Withdraw
+</button>
+
+<p id="wallet-message" role="alert"></p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="wallet.js"></script>
+
+</body>
+</html>

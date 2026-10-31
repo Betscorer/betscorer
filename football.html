@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1210">
+    <meta name="description" content="Football fixtures and demo odds on BetVerse.">
+    <title>Football | BetVerse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="dashboard.html" aria-label="BetVerse dashboard"><span class="logo-mark">B</span>BET<span>VERSE</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="active" href="football.html">Football</a>
+            <a href="dashboard.html#live-matches">Live</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+        <div class="auth"><a class="login" href="profile.html">My profile</a></div>
+    </header>
+    <main class="dashboard-main">
+        <section class="dashboard-welcome">
+            <div><p class="eyebrow">SPORTS · FOOTBALL</p><h1>Football matches</h1><p>Choose an outcome to add it to your demo bet slip.</p></div>
+            <a class="start-btn" href="dashboard.html#sports">All sports <span aria-hidden="true">→</span></a>
+        </section>
+        <div class="content-layout dashboard-content">
+            <section class="matches" aria-label="Football matches">
+                <div class="section-heading match-heading">
+                    <div><p class="eyebrow">UPCOMING FIXTURES</p><h2>Football <span class="match-count">4</span></h2></div>
+                    <span class="market-label">MATCH RESULT</span>
+                </div>
+                <div class="match-list">
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">18:00</span><div class="teams"><strong>Arsenal</strong><span>vs</span><strong>Newcastle</strong></div><span class="league">ENGLISH PREMIER LEAGUE</span></div>
+                        <div class="odds" aria-label="Arsenal versus Newcastle demo odds">
+                            <button type="button" data-match-id="football-arsenal-newcastle" data-match="Arsenal vs Newcastle" data-pick="Arsenal" data-odd="1.85" aria-pressed="false"><span>1</span><strong>1.85</strong></button>
+                            <button type="button" data-match-id="football-arsenal-newcastle" data-match="Arsenal vs Newcastle" data-pick="Draw" data-odd="3.60" aria-pressed="false"><span>X</span><strong>3.60</strong></button>
+                            <button type="button" data-match-id="football-arsenal-newcastle" data-match="Arsenal vs Newcastle" data-pick="Newcastle" data-odd="4.10" aria-pressed="false"><span>2</span><strong>4.10</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">19:30</span><div class="teams"><strong>Bayern Munich</strong><span>vs</span><strong>RB Leipzig</strong></div><span class="league">BUNDESLIGA</span></div>
+                        <div class="odds" aria-label="Bayern Munich versus RB Leipzig demo odds">
+                            <button type="button" data-match-id="football-bayern-leipzig" data-match="Bayern Munich vs RB Leipzig" data-pick="Bayern Munich" data-odd="1.70" aria-pressed="false"><span>1</span><strong>1.70</strong></button>
+                            <button type="button" data-match-id="football-bayern-leipzig" data-match="Bayern Munich vs RB Leipzig" data-pick="Draw" data-odd="4.00" aria-pressed="false"><span>X</span><strong>4.00</strong></button>
+                            <button type="button" data-match-id="football-bayern-leipzig" data-match="Bayern Munich vs RB Leipzig" data-pick="RB Leipzig" data-odd="4.50" aria-pressed="false"><span>2</span><strong>4.50</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">20:00</span><div class="teams"><strong>Inter Milan</strong><span>vs</span><strong>AC Milan</strong></div><span class="league">ITALIAN SERIE A</span></div>
+                        <div class="odds" aria-label="Inter Milan versus AC Milan demo odds">
+                            <button type="button" data-match-id="football-inter-milan" data-match="Inter Milan vs AC Milan" data-pick="Inter Milan" data-odd="2.00" aria-pressed="false"><span>1</span><strong>2.00</strong></button>
+                            <button type="button" data-match-id="football-inter-milan" data-match="Inter Milan vs AC Milan" data-pick="Draw" data-odd="3.30" aria-pressed="false"><span>X</span><strong>3.30</strong></button>
+                            <button type="button" data-match-id="football-inter-milan" data-match="Inter Milan vs AC Milan" data-pick="AC Milan" data-odd="3.55" aria-pressed="false"><span>2</span><strong>3.55</strong></button>
+                        </div>
+                    </article>
+                    <article class="match">
+                        <div class="match-info"><span class="match-time">21:00</span><div class="teams"><strong>Real Madrid</strong><span>vs</span><strong>Atletico Madrid</strong></div><span class="league">SPANISH LA LIGA</span></div>
+                        <div class="odds" aria-label="Real Madrid versus Atletico Madrid demo odds">
+                            <button type="button" data-match-id="football-real-atletico" data-match="Real Madrid vs Atletico Madrid" data-pick="Real Madrid" data-odd="1.95" aria-pressed="false"><span>1</span><strong>1.95</strong></button>
+                            <button type="button" data-match-id="football-real-atletico" data-match="Real Madrid vs Atletico Madrid" data-pick="Draw" data-odd="3.50" aria-pressed="false"><span>X</span><strong>3.50</strong></button>
+                            <button type="button" data-match-id="football-real-atletico" data-match="Real Madrid vs Atletico Madrid" data-pick="Atletico Madrid" data-odd="3.75" aria-pressed="false"><span>2</span><strong>3.75</strong></button>
+                        </div>
+                    </article>
+                </div>
+                <p class="demo-disclaimer">Fixtures and odds are illustrative demo data only.</p>
+            </section>
+            <aside class="betslip" aria-labelledby="slip-title">
+                <div class="slip-header"><h2 id="slip-title">Bet slip</h2><span id="selection-count">0</span></div>
+                <div id="bet-list" aria-live="polite"><p class="empty-slip">Choose an odd to add a selection.</p></div>
+                <label class="stake-label" for="stake">Stake <span>Demo currency</span></label>
+                <div class="stake-field"><span>$</span><input type="number" id="stake" min="0" step="0.01" placeholder="0.00" inputmode="decimal"></div>
+                <div class="possible"><span>Potential return</span><strong>$<span id="win">0.00</span></strong></div>
+                <button id="place-bet" type="button" disabled>Place demo bet</button>
+                <p id="notice" class="notice" role="status" aria-live="polite"></p>
+                <p class="responsible-note">Demo only. No real money or bets are involved.</p>
+            </aside>
+        </div>
+        <span id="dashboard-balance" hidden>0.00</span>
+    </main>
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <a href="dashboard.html"><span aria-hidden="true">⌂</span><small>Home</small></a>
+        <a href="football.html" aria-current="page"><span aria-hidden="true">⚽</span><small>Sports</small></a>
+        <a href="dashboard.html#live-matches"><span aria-hidden="true">●</span><small>Live</small></a>
+        <a href="mybet.html"><span aria-hidden="true">▤</span><small>Bets</small></a>
+        <a href="profile.html"><span aria-hidden="true">◎</span><small>Profile</small></a>
+    </nav>
+    <footer><a class="logo" href="dashboard.html"><span class="logo-mark">B</span>BET<span>VERSE</span></a><p>© 2026 BetVerse. For demonstration purposes only.</p><a href="#">Back to top ↑</a></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

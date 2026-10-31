@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wallet - BetVerse</title>
+<style>
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:50px;
+}
+.card{
+background:#1e293b;
+max-width:400px;
+margin:auto;
+padding:30px;
+border-radius:10px;
+}
+.balance{
+font-size:40px;
+color:#00b74a;
+}
+a{
+display:block;
+margin:15px;
+color:#00b74a;
+text-decoration:none;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+<h1>My Wallet</h1>
+
+<div class="balance" id="balance">
+0
+</div>
+<p id="wallet-message" role="alert"></p>
+
+<p>Available Balance</p>
+
+<a href="deposit.html">Deposit Funds</a>
+
+<a href="withdraw.html">Withdraw Funds</a>
+
+<a href="profile.html">Profile</a>
+
+<a href="index.html">Back Home</a>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="wallet.js"></script>
+
+</body>
+</html>
