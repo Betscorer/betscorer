@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1210">
+    <meta name="description" content="BetVerse sports fixtures and odds demo.">
+    <title>BetVerse | Sportsbook Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=".banner-slider.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="#" aria-label="BetVerse home"><span class="logo-mark">B</span>BET<span>VERSE</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="active" href="dashboard.html#sports">Sports</a>
+            <a href="dashboard.html#matches">Live <span class="live-dot"></span></a>
+            <a href="dashboard.html#matches">Results</a>
+        </nav>
+        <div class="auth" id="home-auth">
+            <a class="login" href="login.html">Log in</a>
+            <a class="register" href="join%20now.html">Join now</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner-slider" aria-label="Featured promotions">
+            <div class="slide active" aria-hidden="false">
+                <h2>🎁 Welcome Bonus</h2>
+                <p>Get 100% Bonus on Your First Deposit</p>
+            </div>
+            <div class="slide" aria-hidden="true">
+                <h2>⚽ Weekend Jackpot</h2>
+                <p>Predict 10 Matches and Win Big</p>
+            </div>
+            <div class="slide" aria-hidden="true">
+                <h2>🔥 Live Betting</h2>
+                <p>Bet While The Match Is In Progress</p>
+            </div>
+        </section>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow"><span class="live-dot"></span> YOUR GAME. YOUR MOMENT.</p>
+                <h1>Welcome to<br><span>BetVerse</span></h1>
+                <p class="hero-copy">Bet on Football, Basketball, Tennis, eSports and More.</p>
+                <p class="hero-tagline">Fast Odds. <span>Smart Bets.</span> Big Excitement.</p>
+                <a class="start-btn" href="dashboard.html#sports">Explore sports <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="hero-score leaderboard" aria-labelledby="leaderboard-title">
+                <span class="score-label">BETVERSE · DEMO LEADERBOARD</span>
+                <h2 id="leaderboard-title">Top Winners</h2>
+                <ol class="leaderboard-list">
+                    <li><span class="leaderboard-rank">1</span><strong>User123</strong><span class="leaderboard-amount">$12,500</span></li>
+                    <li><span class="leaderboard-rank">2</span><strong>BetKing</strong><span class="leaderboard-amount">$10,300</span></li>
+                    <li><span class="leaderboard-rank">3</span><strong>SportsPro</strong><span class="leaderboard-amount">$7,800</span></li>
+                </ol>
+                <div class="score-footer">Illustrative demo leaderboard · No real winnings</div>
+            </div>
+            <div class="hero-decoration" aria-hidden="true">⚽</div>
+        </section>
+
+    </main>
+
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <a href="index.html" aria-current="page"><span aria-hidden="true">⌂</span><small>Home</small></a>
+        <a href="dashboard.html#sports"><span aria-hidden="true">⚽</span><small>Sports</small></a>
+        <a href="dashboard.html#live-matches"><span aria-hidden="true">●</span><small>Live</small></a>
+        <a href="mybet.html"><span aria-hidden="true">▤</span><small>Bets</small></a>
+        <a href="profile.html"><span aria-hidden="true">◎</span><small>Profile</small></a>
+    </nav>
+    <footer>
+        <a class="logo" href="#"><span class="logo-mark">B</span>BET<span>VERSE</span></a>
+        <p>© 2026 BetVerse. For demonstration purposes only.</p>
+        <a href="#">Back to top ↑</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="index.js"></script>
+    <script src="banner.js"></script>
+</body>
+</html>
